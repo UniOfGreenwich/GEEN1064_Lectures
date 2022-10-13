@@ -1,0 +1,13 @@
+flowchart TD
+    start(Wake up)
+    day{is it Friday?}
+    lecturer{is Seb teaching?}
+    stay[stay in bed]
+    attend[attend lecture]
+    lecture{is it finished?}
+    stop(Rewatch the awesome lecture)
+   
+
+   start --> day -- no --> stay 
+   day -- yes --> lecturer -- no --> stay
+   lecturer -- yes --> attend --> lecture -- no --> lecture -- yes --> stop

@@ -1,0 +1,34 @@
+%% A demonstration on how to make a cup of tea using mermaid.
+
+flowchart TD
+    start(Make a Cup of Tea)
+    stop(enjoy that cuppa?!)
+    
+    get_beverage_container[/Get Beverage Container/]
+    container_type{What type?}
+    mug[mug]
+    flask[flask]
+    teabag[/find tea bag \n and put in container/]
+    sugar{sugar?}
+    
+    get_kettle[/get the kettle/]
+    kettle_volume_check{is there enough \n water in the Kettle?}
+    fill_kettle[/fill the kettel \n to desired volume/]
+    turn_kettle_on[/Start to boil the water/]
+    boiled{has the kettle boiled}
+    start_pour[/decant kettle in to container/]
+    container_cap{is cup filled to \n desired volume}
+    end_pour[/stop pouring/]
+
+
+    start --> get_beverage_container --> container_type
+    container_type --> mug 
+    container_type --> flask
+    mug & flask --> teabag --> get_kettle --> kettle_volume_check
+    kettle_volume_check -- no --> fill_kettle --> kettle_check
+    kettle_volume_check -- yes --> turn_kettle_on --> boiled 
+    boiled -- no --> boiled -- yes --> start_pour
+    start_pour --> container_cap -- no --> container_cap -- yes --> end_pour 
+    end_pour --> stir
+    turn_kettle_on --> sugar -- no --> stir
+    sugar -- yes --> 
