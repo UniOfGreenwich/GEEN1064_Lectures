@@ -1,6 +1,6 @@
 ---
-title: Compilers
-description: Compilers
+title: Programming and Flow Diagrams
+description: Programming and Flow Diagrams
 class: gaia
 _class:
   - lead
