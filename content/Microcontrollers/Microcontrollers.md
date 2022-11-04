@@ -146,7 +146,7 @@ $T = \frac{1}{f}$
 
 $$
 \begin{equation*}
-    6.25ns \leftarrow 6.25 \cdot 10^{-8} = \frac{1}{16 \cdot 10^6} \equiv \frac{1}{16MHz}
+    62.5ns \leftarrow 6.25 \cdot 10^{-8} = \frac{1}{16 \cdot 10^6} \equiv \frac{1}{16MHz}
 \end{equation*}
 $$
 
