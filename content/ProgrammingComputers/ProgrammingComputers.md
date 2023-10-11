@@ -393,19 +393,19 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 
 <div>
 
-left 
+![](https://bb.ca/catalogue_images/580x358/2499481.png)
 
 </div>
 
 <div>
 
-middle
+![](https://i.stack.imgur.com/N4Mbs.jpg)
 
 </div>
 
 <div>
 
-right 
+![](https://i.stack.imgur.com/JTXCW.jpg)
 
 </div>
 
