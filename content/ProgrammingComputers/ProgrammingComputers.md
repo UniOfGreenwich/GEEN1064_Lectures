@@ -22,6 +22,12 @@ style: |
          border: none!important; 
           vertical-align: middle;
       }
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
 size: 16:9
 paginate: true
 _paginate: false
@@ -381,12 +387,63 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 
 ---
 
-## Programming information
+## Eve Spike block
 
-Four Cylces per Line of code
+<div class="columns">
 
-$$ 0.0000001 = \frac{1}{100M}$$
+<div>
 
-$$ 100ns = \frac{1}{100*10^{6}} $$
+left 
+
+</div>
+
+<div>
+
+middle
+
+</div>
+
+<div>
+
+right 
+
+</div>
+
+</div>
 
 ---
+
+## Programming Information for EV3 Spike
+
+$$ T = \frac{1}{f}$$
+
+- T is time
+- f is frequency
+
+Ev3 Spike CPU is a STM32F413 and operates at 100MHz on the Arm Cortex M4.
+
+Clock Speed: 
+$$ 0.0000001 = \frac{1}{100M}$$
+
+$$ 100ns = \frac{1}{100*10^{6}}$$
+
+Per line of code ($L_c$):
+ $$ 400ns = L_c \cdot (4 \cdot 100ns)$$ 
+
+---
+
+## Programming Space
+
+Each program file takes up n Bytes
+
+The Winbond W25Q256JV providfes 32MB for a program and data storage.
+
+- 80% of all EV3 files use the ZIP algorithm, the EV3 file contains a number of compressed files. 
+  - An EV3 file contains 6 to 26 files, the average being 9. File names inside are always `___CopyrightYear`, `___ProjectTitle`, `Activity.x3a`, `ActivityAssets.laz`, `Program.ev3p` and `Project.lvprojx`. 
+  - EV3 files are between 4 KB and 320 KB in size. The following keywords are characteristic: `Activity.x3a `and `Il'Mw49`. These files are often associated with luuma, robot, guitar, ctric, sensor, color, balancing, printer and code.
+- 5% of all EV3 files use the same file format
+  - EV3 files can between 2 KB - 14 KB.
+
+<!--
+https://filext.com/file-extension/EV3
+-->
