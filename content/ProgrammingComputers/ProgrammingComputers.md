@@ -439,12 +439,35 @@ $$ T = \frac{1}{f}$$
 Ev3 Spike CPU is a STM32F413 and operates at 100MHz on the Arm Cortex M4.
 
 Clock Speed: 
+
 $$ 0.0000001 = \frac{1}{100M}$$
 
 $$ 100ns = \frac{1}{100*10^{6}}$$
 
 Per line of code ($L_c$):
- $$ 400ns = L_c \cdot (4 \cdot 100ns)$$ 
+
+$$ 400ns = L_c \cdot (4 \cdot 100ns)$$ 
+
+--- 
+
+## Program Excute time
+
+Program with 130 lines of code would take:
+
+$$ 100ns = \frac{1}{100*10^{6}}$$
+<p></p>
+
+$$ 400ns = L_c \cdot (4 \cdot 100ns)$$ 
+<p></p>
+
+$$ 0.0000052 = 130 \cdot (4 \cdot 100ns)$$ 
+<p></p>
+
+$$ 5.2ms = 130 \cdot (4 \cdot 100ns)$$ 
+
+In reality, your programs will take longer as you will have timers, sleeps, and sensor events. 
+
+But here you have good indication of the time required to excute code.
 
 ---
 
@@ -459,13 +482,21 @@ The Winbond W25Q256JV providfes 32MB for a program and data storage.
 
 Average program size:
 
+<div style="font-size:25px">
+
   $$2,880,000 = 9 \cdot 320KB$$
   $$2.8MB = 9 \cdot (320 \cdot 10^3)$$
 
+</div>
+
 Max program size:
+
+<div style="font-size:25px">
 
 $$8,320,000 = 26 \cdot 320KB$$
 $$8.32MB = 26 \cdot (320 \cdot 10^3)$$
+
+</div>
 
 <!--
 https://filext.com/file-extension/EV
@@ -474,4 +505,3 @@ https://filext.com/file-extension/EV
 6 medium programs
 3 large programs
 -->
-
