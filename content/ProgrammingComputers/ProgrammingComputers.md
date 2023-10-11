@@ -411,6 +411,22 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 
 </div>
 
+<!--
+
+ - main CPU is an STM32F413. It includes 1M of flash and 320k of RAM and the ARM Cortex M4 core can be clocked up to 100MHz
+ 
+ - In addition to the 1M of embedded flash, there's a Winbond W25Q256JV providing an additional 32MB for program and data storage.
+
+ - The 6 motor outputs are driven by a trio of LB1836 dual motor drivers.
+
+ - Bluetooth connectivity is provided by the TI CC2564C. (LED SIDE Raised cube)
+
+- source https://bricks.stackexchange.com/questions/15057/what-internal-electronics-do-spike-prime-and-mindstorms-robot-inventor-use
+
+
+
+-->
+
 ---
 
 ## Programming Information for EV3 Spike
@@ -434,16 +450,28 @@ Per line of code ($L_c$):
 
 ## Programming Space
 
-Each program file takes up n Bytes
-
 The Winbond W25Q256JV providfes 32MB for a program and data storage.
 
-- 80% of all EV3 files use the ZIP algorithm, the EV3 file contains a number of compressed files. 
-  - An EV3 file contains 6 to 26 files, the average being 9. File names inside are always `___CopyrightYear`, `___ProjectTitle`, `Activity.x3a`, `ActivityAssets.laz`, `Program.ev3p` and `Project.lvprojx`. 
-  - EV3 files are between 4 KB and 320 KB in size. The following keywords are characteristic: `Activity.x3a `and `Il'Mw49`. These files are often associated with luuma, robot, guitar, ctric, sensor, color, balancing, printer and code.
-- 5% of all EV3 files use the same file format
-  - EV3 files can between 2 KB - 14 KB.
+- EV3 files use the ZIP algorithm, the EV3 file contains a number of compressed files. 
+  - An EV3 file contains 6 to 26 files, the average being 9. 
+  - EV3 files are between 4 KB and 320 KB in size. T
+  - These files are often associated with luuma, robot, guitar, ctric, sensor, color, balancing, printer and code.
+
+Average program size:
+
+  $$2,880,000 = 9 \cdot 320KB$$
+  $$2.8MB = 9 \cdot (320 \cdot 10^3)$$
+
+Max program size:
+
+$$8,320,000 = 26 \cdot 320KB$$
+$$8.32MB = 26 \cdot (320 \cdot 10^3)$$
 
 <!--
-https://filext.com/file-extension/EV3
+https://filext.com/file-extension/EV
+
+10 small programs
+6 medium programs
+3 large programs
 -->
+
