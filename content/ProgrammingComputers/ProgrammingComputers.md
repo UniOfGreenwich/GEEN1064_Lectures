@@ -182,7 +182,7 @@ public class startup class​
 ```
 ---
 
-## Learning to Programme
+## Learning to Program
 
 You do not need to know how to program in all languages, ​you only need to know how to program.​
 
@@ -367,3 +367,27 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 [https://blockly.games/?lang=en](https://blockly.games/?lang=en)
 
 ![center](../../figures/blockly.png)
+
+---
+
+## Ev3 Spike
+
+- Icon 
+- Block
+- Python
+
+![bg right: 75% 100% vertical](https://eduk8.gr/wp-content/uploads/2022/02/spike_ess_code.png)
+
+![bg right:75% 75%](https://thecodingfun672211385.files.wordpress.com/2021/01/python-start-line-sensing-part-1.jpg)
+
+---
+
+## Programming information
+
+Four Cylces per Line of code
+
+$$ 0.0000001 = \frac{1}{100M}$$
+
+$$ 100ns = \frac{1}{100*10^{6}} $$
+
+---
