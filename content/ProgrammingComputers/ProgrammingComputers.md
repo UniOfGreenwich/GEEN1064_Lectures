@@ -41,7 +41,7 @@ math: true
 
 ---
 
-![bg center 45%](../../figures/assemble_avengers.png)
+![bg center 35%](https://imgs.xkcd.com/comics/good_code.png)
 
 ---
 
@@ -222,7 +222,6 @@ END​
 ---
 
 ##  Conditional Checks
-
 
 <table align=center>
 <tr>
