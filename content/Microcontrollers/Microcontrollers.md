@@ -1,6 +1,6 @@
 ---
-title: DOCUMENT TITLE
-description: DESCRIPTION OF DOCUMENT
+title: Mirco Controllers
+description: Micro Controllers
 class: gaia
 _class:
   - lead
@@ -66,7 +66,7 @@ math: true
 - CPU is the brain of any computer and it is the part of a computer that performs calculations, actions, and runs programs.
   - Intel Core i series, AMD
 
-![bg right:50% 50%](../../figures/upANDuc.png)
+![bg right:50% 50%](../figures/upANDuc.png)
 
 
 ---
@@ -165,6 +165,17 @@ $$
 
 </details>
 
+3. or Intel i9-14900KF Processor at 9.044GHz (Overclocked)
+
+<details>
+<summary>Answer</summary>
+
+$$
+\begin{equation*}
+    110.57ps \leftarrow 1.1057 \cdot 10^{-10} = \frac{1}{9.044 \cdot 10^9} \equiv \frac{1}{9.044GHz}
+\end{equation*}
+$$
+</details>
 
 ---
 
