@@ -147,7 +147,7 @@ The PWM turns the pin on and off so quickly, the effective value for the voltage
 
 ----
 
-## Digital TO Analogue Conversion Using Analogwrite()​
+## Digital To Analogue Conversion Using `Analogwrite()`​
 
 `analogWrite()`, the pin will generate a steady rectangular wave of the specified duty cycle until the next call to `analogWrite()` or a call to `digitalRead()` or `digitalWrite()` on the same pin​.
 
@@ -158,7 +158,7 @@ The PWM turns the pin on and off so quickly, the effective value for the voltage
 **Parameters**
 
 - `pin`: the Arduino pin to write to. Allowed data types: `int`.
-- `value`: the duty cycle: between 0 (always off) and 255 (always on). Allowed data types: `int`.
+- `value`: the duty cycle: between 0 (always off) and 255 (always on @110% of the voltage). Allowed data types: `int`.
 
 
 ---
@@ -221,7 +221,9 @@ The `map()` function is used to scale values from one range to another:
 
 ## Map Equation
 
-`map(val, in_min, in_max,out_min,out_max)`
+- `map(val, in_min, in_max,out_min,out_max)` 
+
+- `map(100,0,1023,0,255)`
 
 $$mapped=  (val - in_{min}) \cdot \frac{(out_{max} - out_{min} + 1)}{(in_{max} - in_{min} + 1)} + out_{min}$$
 
