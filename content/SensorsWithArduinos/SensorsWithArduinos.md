@@ -186,7 +186,7 @@ $$V_{out}= \frac{R2}{R1 + R2} \cdot V_{in}$$
 
 For exampe, if R1 is $470\Omega$, R2 is $270\Omega$, and Vin is $5V$:
 
-$$ 3.18V = \frac{470}{270-470} \cdot 5V \Lleftarrow V_{out} = \frac{R2}{R1 + R2} \cdot V_{in} $$
+$$ 3.18V = \frac{470}{270+470} \cdot 5V \Lleftarrow V_{out} = \frac{R2}{R1 + R2} \cdot V_{in} $$
 
 ![bg right:30% 100%](../../figures/voltDividers.png)
 
@@ -254,12 +254,12 @@ $$
 
 ---
 
-## Analogue and Digital functios
+## Analogue and Digital functions
 
 ![center](../../figures/functionTable.png)
 
 ---
-## Seria Communication
+## Serial Communication
 
 
 ![center](../../figures/serialCom.png)
@@ -317,4 +317,3 @@ delay(332); // 332 milliseconds delay
 
 - `digitalRead()`
   - Digital input, writes either 5v or 0v to an output digital pin
-
