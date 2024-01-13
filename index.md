@@ -3,3 +3,5 @@
 [Programming and Flow Diagrams](./content/ProgrammingComputers/ProgrammingComputers.html)
 
 [Sensors with Arduino](./content/SensorsWithArduinos/SensorsWithArduinos.html)
+
+[Data Input & Processing](./content/DataProcessing/DataProcessing.html)
