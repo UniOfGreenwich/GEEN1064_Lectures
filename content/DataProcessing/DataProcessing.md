@@ -222,6 +222,61 @@ $$
 
 ---
 
+## Interger Overflow
+
+**Scenario:** Your wage is stored in a 16 bit number, but then some stores this in as an 8 bit number due to a coding error...
+
+<div align=center style="margin:50px 10px 20px 30px">
+
+$$
+  \begin{aligned}
+
+    16\ Bit : £45,141_{10} &= 1\ 1\ 0\ 1\ 1\ 0\ 1\ 0\ 1\ 0\ 1\ 1\ 0\ 1\ 0\ 1_2\\
+
+    &\big\Downarrow\\
+
+    8\ Bit : £181_{10} &= \hspace{6em} 1\ 0\ 1\ 1\ 0\ 1\ 0 \ 1_2 \\
+
+  \end{aligned}
+$$
+
+</div>
+
+---
+
+## Your turn
+
+<p align=center>
+
+|**$2^{14}$** | **$2^{13}$** | **$2^{12}$** |  **$2^{11}$** |**$2^{10}$** | **$2^{9}$** | **$2^{8}$** |  **$2^{7}$** |  **$2^{6}$** | **$2^{5}$** | **$2^{4}$**  | **$2^{3}$** | **$2^{2}$** | **$2^{1}$** | **$2^{0}$** |
+|---------|---------|---------|---------|---------|---------|---------|----------|----------|---------|----------|---------|---------|---------|--------|
+|  16384   |   8192   |   4096   |    2048 |  1024   |   512   |   256   |    128  |    64   |   32   |   16   |    8    |   4    |   2   |   1  | 
+
+</p>
+
+<div align=center>
+
+$29,952$ to 11-bit value:
+
+</div>
+
+<details>
+<summary>Answer</summary>
+
+$$
+  \begin{aligned}
+
+    14\ Bit : 29,952_{10} &= 1\ 1\ 0\ 1\ 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0_2\\
+
+    &\big\Downarrow\\
+
+    11\ Bit : 2080_{10} &= \hspace{3em} 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0_2 \\
+
+  \end{aligned}
+$$
+
+---
+
 ## Integer Overflow: One line of Code
 
 ```ada
