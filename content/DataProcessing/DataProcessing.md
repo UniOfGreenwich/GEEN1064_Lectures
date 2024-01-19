@@ -173,13 +173,13 @@ $$
 
 ## Your turn
 
-<p align=center>
+<div align=center>
 
 |**$2^{10}$** | **$2^{9}$** | **$2^{8}$** |  **$2^{7}$** |  **$2^{6}$** | **$2^{5}$** | **$2^{4}$**  | **$2^{3}$** | **$2^{2}$** | **$2^{1}$** | **$2^{0}$** |
 |---------|---------|---------|----------|----------|---------|----------|---------|---------|---------|--------|
 |  1024   |   512   |   256   |    128  |    64   |   32   |   16   |    8    |   4    |   2   |   1  | 
 
-</p>
+</div>
 
 - $1\ 1\ 1\ 1_2$ <details>
   <summary>Answer</summary>
@@ -232,13 +232,25 @@ $$
   \begin{aligned}
 
     16\ Bit : £45,141_{10} &= 1\ 1\ 0\ 1\ 1\ 0\ 1\ 0\ 1\ 0\ 1\ 1\ 0\ 1\ 0\ 1_2\\
-
+    
     &\big\Downarrow\\
-
-    8\ Bit : £181_{10} &= \hspace{6em} 1\ 0\ 1\ 1\ 0\ 1\ 0 \ 1_2 \\
 
   \end{aligned}
 $$
+
+</div>
+
+<details>
+<summary>...</summary>
+
+$$
+\begin{aligned}
+    8\ Bit : £\hspace{2em}181_{10} &= \hspace{6em} 1\ 0\ 1\ 1\ 0\ 1\ 0 \ 1_2 \\
+
+  \end{aligned}
+$$
+
+</details>
 
 </div>
 
@@ -260,8 +272,6 @@ $29,952$ to 11-bit value:
 
 </div>
 
-<details>
-<summary>Answer</summary>
 
 $$
   \begin{aligned}
@@ -270,10 +280,21 @@ $$
 
     &\big\Downarrow\\
 
-    11\ Bit : 2080_{10} &= \hspace{3em} 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0_2 \\
+  \end{aligned}
+$$
+
+<details>
+<summary>Answer</summary>
+
+$$
+\begin{aligned}
+
+    11\ Bit : \hspace{1em}2080_{10} &= \hspace{3em} 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0_2 \\
 
   \end{aligned}
 $$
+
+</div>
 
 ---
 
@@ -488,7 +509,20 @@ What challenges?
 </div>
 </div>
 
-</summary>
+</details>
+
+<!--
+- Data Validation, Error Checking
+- Redunancy Checks/sensors, Back ups
+- Real-time Monitoring and Feedback
+- Data Encryption and Security Measures
+
+- Scalability and Performance Optimisation
+- User Training and Documentation
+- Regular Maintenance and Updates
+- Collaboration and Communication
+- Adaptability to Changing Environments
+-->
 
 ---
 
