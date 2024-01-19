@@ -289,7 +289,7 @@ $$
 $$
 \begin{aligned}
 
-    11\ Bit : \hspace{1em}2080_{10} &= \hspace{3em} 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0_2 \\
+    11\ Bit : \hspace{1em}1040_{10} &= \hspace{3em} 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0_2 \\
 
   \end{aligned}
 $$
