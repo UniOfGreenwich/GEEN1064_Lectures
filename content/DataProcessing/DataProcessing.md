@@ -54,10 +54,10 @@ math: true
 
 ## Content
 
-- Information Theory
 - Binary
-- Hexadecimal
-- Octal 
+- Endian
+- Integer Overflow
+- Data Processing 
 
 ---
 
