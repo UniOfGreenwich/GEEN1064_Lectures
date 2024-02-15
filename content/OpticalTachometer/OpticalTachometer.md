@@ -120,12 +120,13 @@ $R = \frac{V}{I}$
 
 ## Testing light sensitivity : Circuit
 
+![bg right:40% w:500](../../figures/digitalPhototransistorCircuit.PNG)
 
+ - we are doing this physically
 ---
 ## Testing light sensitivity : Code
 
-We are going to build a circuit with 
-
+- Try different colour LEDs and distances, is there a difference?
 
 ```c
 int adc = 0,resistance = 10000;
@@ -156,22 +157,84 @@ void loop(){
 
 - RPM 
   - is more practical and widely used in engineering and everyday settings where specific rotational speeds need to be specified and monitored
-- Angular Velocity
+- Angular Velocity ($\omega$)
   - is more commonly used in theoretical and analytical studies of rotational motion.
 
---- 
-
-## Numerical relationship RPM and Angular Velocity
+<div align="center">
 
 $\omega = \frac{2\Pi\  \cdot\ RPM}{60}$
 
-​Where $\omega$ is rad/s, and RPM is revolution per minute
-
+</div>
 
 
 ---
 
-## [taˈkɒmɪtə] code
+## Matlab code
+
+- Open and Create a script, call it what you like.
+
+```matlab
+clear
+clc
+% Manually declare the RPM array
+RPM = [0, 100, 150, 264, 304, 418, 500, 526, 526, 526, 526, 526, 526, 524, 524, 526, 526, 526, 526, 526, 526, 526, 450];
+
+% Number of data points
+num_points = numel(RPM);
+
+% Time in minutes
+T_mim = (0:num_points-1).';
+
+% Calculate rad/m
+rad_per_m = pi() * 2 * RPM;
+
+% Calculate rad/s
+rad_per_s = rad_per_m / 60;
+
+% Calculate delta rad/s
+delta_rad_per_s = [0; diff(rad_per_s)];
+
+% Calculate rad/s^2
+rad_per_s_squared = delta_rad_per_s ./ [0; diff(T_mim)];
+```
+ 
+---
+
+## Matlab code Part 2
+
+```matlab
+% Create figure
+figure;
+
+% Create bar plot for rad_per_min
+yyaxis left;
+bar(T_mim, rad_per_s);
+xlabel('T_min');
+ylabel('Rad/s (Bar)');
+title('RPM vs Rad/s^2');
+grid on;
+
+% Create line plot for rad_per_s_squared
+yyaxis right;
+plot(T_mim, rad_per_s_squared, 'LineWidth', 2);
+ylabel('Rad/s^2 (Line)');
+
+% Show legend
+legend('Rad/s', 'Rad/s^2');
+
+% Adjust y-axis limits for line plot
+ylim_right = ylim;
+ylim_right(1) = min(ylim_right(1), 0); % Ensure minimum value is 0
+yyaxis right;
+ylim(ylim_right);
+
+% Adjust figure layout
+grid on;
+```
+
+---
+
+## Arduino [taˈkɒmɪtə] code
 
 ```c
 unsigned int rpm = 0;
@@ -205,6 +268,14 @@ void loop(){
 
 ## Interrupts
 
+- Micro Controllers can only do one thing at a time. 
+- We use interrupts to break out of what is currently being executed
+  - External Interrupts (Pins)
+  - Timer/Counter Interrupts (internal clock)
+  - Serial Communication Interrupts (receiving data)
+  - ADC Conversion Complete Interrupt (`analogRead()`)
+
+![bg right:50% 100%](../../figures/interrupts.jpg)
 
 ---
 ## TC1602A - LCD
@@ -219,3 +290,12 @@ E (Pin 6): Enable. This pin is used to enable data transfers to the LCD module.
 -->
 ---
 
+## Adding the LCD to the current ciruit
+
+
+---
+
+## Final code
+
+
+---
