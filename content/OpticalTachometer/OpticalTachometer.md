@@ -174,8 +174,10 @@ $\omega = \frac{2\Pi\  \cdot\ RPM}{60}$
 - Open and Create a script, call it what you like.
 
 ```matlab
-clear
+clear 
+close all hidden
 clc
+
 % Manually declare the RPM array
 RPM = [0, 100, 150, 264, 304, 418, 500, 526, 526, 526, 526, 526, 526, 524, 524, 526, 526, 526, 526, 526, 526, 526, 450];
 
@@ -192,10 +194,10 @@ rad_per_m = pi() * 2 * RPM;
 rad_per_s = rad_per_m / 60;
 
 % Calculate delta rad/s
-delta_rad_per_s = [0; diff(rad_per_s)];
+delta_rad_per_s = [0; diff(rad_per_s')]; % transpose 1 by 23 to 23 by 1
 
 % Calculate rad/s^2
-rad_per_s_squared = delta_rad_per_s ./ [0; diff(T_mim)];
+rad_per_s_squared = delta_rad_per_s ./ [0; diff(T_mim)]; % multiplication of array elements
 ```
  
 ---
@@ -206,17 +208,17 @@ rad_per_s_squared = delta_rad_per_s ./ [0; diff(T_mim)];
 % Create figure
 figure;
 
-% Create bar plot for rad_per_min
+% Create bar plot for RPM
 yyaxis left;
-bar(T_mim, rad_per_s);
-xlabel('T_min');
-ylabel('Rad/s (Bar)');
+bar(T_mim, RPM);
+xlabel('T_{min}');
+ylabel('RPM');
 title('RPM vs Rad/s^2');
 grid on;
 
 % Create line plot for rad_per_s_squared
 yyaxis right;
-plot(T_mim, rad_per_s_squared, 'LineWidth', 2);
+plot(T_mim, rad_per_s_squared, 'LineWidth', 2,'Marker','*');
 ylabel('Rad/s^2 (Line)');
 
 % Show legend
@@ -231,6 +233,12 @@ ylim(ylim_right);
 % Adjust figure layout
 grid on;
 ```
+
+---
+## Tachometer Circuit Design
+**[taˈkɒmɪtə]**
+
+
 
 ---
 
@@ -298,4 +306,7 @@ E (Pin 6): Enable. This pin is used to enable data transfers to the LCD module.
 ## Final code
 
 
----
+```c
+
+
+```
