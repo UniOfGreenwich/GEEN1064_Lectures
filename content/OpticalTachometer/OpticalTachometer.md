@@ -95,9 +95,9 @@ math: true
 
 <div align=center>
 
-$V_{Rx} = V{s}\cdot\frac{R1}{R1 + R2}$
+$V_{out} = \frac{R1}{R1 + R2}\cdot V_{in}$
 
-$0.45v = 5v\cdot\frac{1000\Omega}{1000\Omega + 10000\Omega}$
+$$ 3.18V = \frac{470\Omega}{270\Omega+470\Omega} \cdot 5V \Lleftarrow V_{out} = \frac{R2}{R1 + R2} \cdot V_{in} $$
 
 </div>
 
@@ -110,6 +110,8 @@ $V = I*R$
 $I = \frac{V}{R}$
 
 $R = \frac{V}{I}$
+
+
 
 
 </div>
@@ -133,7 +135,7 @@ void setup(){
   Serial.begin(9600);
 }
 
-void loop{
+void loop(){
    adc = analogRead(5);
    voltage = adc / 1023 * 5; // adcMax = 1023 * supplied voltage -> 5V
    current = voltage / resistance; // Ohms law, provides approximation 
@@ -146,20 +148,62 @@ void loop{
 }
 ```
 
+---
 
+## Propeller/Turbines
 
---- 
+![bg right:40% w:500](../../figures/propeller_types.jpg)
 
-## [taˈkɒmɪtə]
-
-
-
-
-
-
-
+- RPM 
+  - is more practical and widely used in engineering and everyday settings where specific rotational speeds need to be specified and monitored
+- Angular Velocity
+  - is more commonly used in theoretical and analytical studies of rotational motion.
 
 --- 
+
+## Numerical relationship RPM and Angular Velocity
+
+$\omega = \frac{2\Pi\  \cdot\ RPM}{60}$
+
+​Where $\omega$ is rad/s, and RPM is revolution per minute
+
+
+
+---
+
+## [taˈkɒmɪtə] code
+
+```c
+unsigned int rpm = 0;
+int count = 0, timeOld = 0;
+const float distance_per_revolution_mm = 88.86;
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop(){
+  delay(1000);
+
+  for (int i = 0; i < 60; i++)
+  {
+    if (analogRead(5) < 80){
+       count++;
+    }
+  }
+  //(30 = 2 blades) (20 = 3 blades) (15 = 4 blades) (12 = 5 blades)
+  rpm = (2 * rpmcount * 60000) / (millis() - timeold) * distance_per_revolution;
+
+  Serial.print("RPM: ");
+  Serial.println(rpm);
+  timeOld = millis();
+
+}
+```
+
+---
+
+## Interrupts
 
 
 ---
@@ -173,3 +217,5 @@ RS mode 1 -> Data mode
 RW (Pin 5): Read/Write. This pin selects between read (RW=1) and write (RW=0) operations. Often connected to ground for write-only operations.
 E (Pin 6): Enable. This pin is used to enable data transfers to the LCD module.
 -->
+---
+
