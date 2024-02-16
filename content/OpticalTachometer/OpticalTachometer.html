@@ -964,12 +964,11 @@ table, th,tr, td {
     }
   }
   <span class="hljs-comment">//(30 = 2 blades) (20 = 3 blades) (15 = 4 blades) (12 = 5 blades)</span>
-  rpm = (<span class="hljs-number">2</span> * rpmcount * <span class="hljs-number">60000</span>) / (millis() - timeold) * distance_per_revolution;
+  rpm = (<span class="hljs-number">2</span> * count * <span class="hljs-number">60000</span>) / (millis() - timeOld) * distance_per_revolution_mm;
 
   Serial.print(<span class="hljs-string">&quot;RPM: &quot;</span>);
   Serial.println(rpm);
   timeOld = millis();
-
 }
 </code></pre>
 </section>
