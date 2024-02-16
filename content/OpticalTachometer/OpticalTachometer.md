@@ -123,6 +123,10 @@ $R = \frac{V}{I}$
 ![bg right:40% w:500](../../figures/digitalPhototransistorCircuit.PNG)
 
  - we are doing this physically
+
+ - LED has 220 Ohms resistor
+ - Phototransistor is 10k Ohms resistor
+ 
 ---
 ## Testing light sensitivity : Code
 
