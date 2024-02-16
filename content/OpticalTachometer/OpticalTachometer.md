@@ -238,6 +238,7 @@ grid on;
 ## Tachometer Circuit Design
 **[taˈkɒmɪtə]**
 
+![bg right:40% w:500](../../figures/digitalPhototransistorCircuit.PNG)
 
 
 ---
