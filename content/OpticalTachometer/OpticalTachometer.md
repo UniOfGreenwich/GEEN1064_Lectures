@@ -126,7 +126,7 @@ $R = \frac{V}{I}$
 
  - LED has 220 Ohms resistor
  - Phototransistor is 10k Ohms resistor
- 
+
 ---
 ## Testing light sensitivity : Code
 
@@ -268,12 +268,11 @@ void loop(){
     }
   }
   //(30 = 2 blades) (20 = 3 blades) (15 = 4 blades) (12 = 5 blades)
-  rpm = (2 * rpmcount * 60000) / (millis() - timeold) * distance_per_revolution;
+  rpm = (2 * count * 60000) / (millis() - timeOld) * distance_per_revolution_mm;
 
   Serial.print("RPM: ");
   Serial.println(rpm);
   timeOld = millis();
-
 }
 ```
 
