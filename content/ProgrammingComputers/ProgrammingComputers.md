@@ -207,20 +207,15 @@ You do not need to know how to program in all languages, ​you only need to kno
 
 So before programming actual code you should write in pseudocode;
 
-Are you older enough to take a driving test?​
-
 ```ps
 BEGIN​
-  NUMBER age​
+  NUMBER a
+  NUMBER b
 
-  INPUT "Enter your age for driving licence"​
-  
-  OUTPUT age​
-
-  IF age>=16  THEN​
-      OUTPUT "You can take driving licence"​
+  IF b > a  THEN​
+      OUTPUT "b  is greater than a"​
   ELSE​
-    OUTPUT "You can't take driving licence"​
+    OUTPUT "b is not greater than a"​
   ENDIF
   ​
 END​
@@ -393,7 +388,7 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 
 <div>
 
-![](https://bb.ca/catalogue_images/580x358/2499481.png)
+![](../../figures/spike-prime-hub-en.jpg)
 
 </div>
 
@@ -411,97 +406,29 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 
 </div>
 
-<!--
-
- - main CPU is an STM32F413. It includes 1M of flash and 320k of RAM and the ARM Cortex M4 core can be clocked up to 100MHz
- 
- - In addition to the 1M of embedded flash, there's a Winbond W25Q256JV providing an additional 32MB for program and data storage.
-
- - The 6 motor outputs are driven by a trio of LB1836 dual motor drivers.
-
- - Bluetooth connectivity is provided by the TI CC2564C. (LED SIDE Raised cube)
-
-- source https://bricks.stackexchange.com/questions/15057/what-internal-electronics-do-spike-prime-and-mindstorms-robot-inventor-use
-
-
-
--->
-
 ---
 
-## Programming Information for EV3 Spike
+## Spike Software
 
-$$ T = \frac{1}{f}$$
+<table>
+<tr>
+<td>
+Icon blocks
 
-- T is time
-- f is frequency
+![](../../figures/spike_icon_blocks.png)
 
-Ev3 Spike CPU is a STM32F413 and operates at 100MHz on the Arm Cortex M4.
+</td>
+<td>
+Word Blocks
 
-Clock Speed: 
+![](../../figures/spike_word_blocks.png)
 
-$$ 0.0000001 = \frac{1}{100M}$$
+</td>
+<td>
+Python
 
-$$ 100ns = \frac{1}{100*10^{6}}$$
+![](../../figures/spike_python.png)
 
-Per line of code ($L_c$):
-
-$$ 400ns = L_c \cdot (4 \cdot 100ns)$$ 
-
---- 
-
-## Program Excute time
-
-Program with 130 lines of code would take:
-
-$$ 100ns = \frac{1}{100*10^{6}}$$
-<p></p>
-
-$$ 400ns = L_c \cdot (4 \cdot 100ns)$$ 
-<p></p>
-
-$$ 0.0000052 = 130 \cdot (4 \cdot 100ns)$$ 
-<p></p>
-
-$$ 5.2ms = 130 \cdot (4 \cdot 100ns)$$ 
-
-In reality, your programs will take longer as you will have timers, sleeps, and sensor events. 
-
-But here you have good indication of the time required to excute code.
-
----
-
-## Programming Space
-
-The Winbond W25Q256JV providfes 32MB for a program and data storage.
-
-- EV3 files use the ZIP algorithm, the EV3 file contains a number of compressed files. 
-  - An EV3 file contains 6 to 26 files, the average being 9. 
-  - EV3 files are between 4 KB and 320 KB in size. T
-  - These files are often associated with luuma, robot, guitar, ctric, sensor, color, balancing, printer and code.
-
-Average program size:
-
-<div style="font-size:25px">
-
-  $$2,880,000 = 9 \cdot 320KB$$
-  $$2.8MB = 9 \cdot (320 \cdot 10^3)$$
-
-</div>
-
-Max program size:
-
-<div style="font-size:25px">
-
-$$8,320,000 = 26 \cdot 320KB$$
-$$8.32MB = 26 \cdot (320 \cdot 10^3)$$
-
-</div>
-
-<!--
-https://filext.com/file-extension/EV
-
-10 small programs
-6 medium programs
-3 large programs
--->
+</td>
+</tr>
+</table>
