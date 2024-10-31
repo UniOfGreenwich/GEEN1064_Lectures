@@ -219,7 +219,7 @@ int add(int num){
 </div>
 
 Don’t worry will not be programming in Assembly, `C/C++` is a language we can understand easily as it more human readable.
-
+<!--
 ---
 
 ## Simulation Time
@@ -231,3 +231,5 @@ We are going to use tinkercad to simulated in using a microcontroller in a safe 
 [www.tinkercad.com](www.tinkercad.com)
 
 ![bg right:50% 100% vertical](../../figures/tinkercadpreview.png)
+
+-->
