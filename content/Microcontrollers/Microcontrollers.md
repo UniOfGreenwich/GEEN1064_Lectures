@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ---
 title: Mirco Controllers
 description: Micro Controllers
@@ -22,14 +21,18 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
-size: 16:9
+    section::after {
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: GEEN1064 | Engineering Design and Implementation
+auto-scaling: false
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
 
-# Deployment Boards 
+# Development Boards 
 
     Module Code: GEEN1064
 
@@ -67,7 +70,7 @@ math: true
 - CPU is the brain of any computer and it is the part of a computer that performs calculations, actions, and runs programs.
   - Intel Core i series, AMD
 
-![bg right:50% 50%](../figures/upANDuc.png)
+![bg right:50% 50%](../../figures/upANDuc.png)
 
 
 ---
