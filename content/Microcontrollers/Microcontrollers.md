@@ -112,10 +112,11 @@ making the community of users a great resource for learners.
 Prototype Board from Arduino
 - The Uno is a µC development board with an Atmega328P Chip
 - 14 digital Input/Output (I/O) pins
-- 6 Analogue I/O pins (e.g. temperature sensors)
+- 6 Analogue Input pins (e.g. temperature sensors)
+- 6 PWM Output pins (e.g. actuators)
 - A 16 MHz quartz crystal
 
-![center](../../figures/arduinoschematics.png)
+![bg right:50% 100%](../../figures/arduinoschematics.png)
 
 ---
 
@@ -125,64 +126,59 @@ Prototype Board from Arduino
 
 ---
 
-## Clock Speed
-
-The clock speed measures the number of cycles your CPU executes per second, measured in GHz or MHz (giga/megahertz).
-
-A “cycle” is technically a pulse synchronized by an internal oscillator, but for our purposes, they’re a basic unit that helps understand a CPU’s speed. During each cycle, billions of transistors within the processor open and close.
-
-
-![bg right:50% 100%](../../figures/freq1.png)
+![w:935 center](../../figures/AUno_Rev2_CD.png)
 
 ---
 
-## Clock Speed
-<div align=right>
+![w:1050 center](../../figures/AD_Pinout.png)
 
-$T = \frac{1}{f}$
+----
+
+## Base Code
+
+<div style="font-size:27px">
+
+```cpp
+int led = 12; // set a variable, in this case pin number 12
+
+void setup(){
+  // Should only run once
+  pinMode(led, OUTPUT); // set pin to send signal out
+  Serial.begin(9600); // set the speed at which data is transmitted to the serial monitor
+}
+
+void loop(){
+  // This runs forever
+  digtialWrite(led, HIGH); // Turn pin 12 on
+  Serial.println("On");
+  delay(500); // on for 0.5 secs
+  digtialWrite(led, LOW); // turn pin 12 off
+  Serial.println("Off");
+  delay(500); // off for 0.5 secs
+}
+```
 
 </div>
 
-1. So how fast is the ATMega328P at 16MHZ?
+----
 
-<details>
-<summary>Answer</summary>
+## Basic Functions
 
-$$
-\begin{equation*}
-    62.5ns \leftarrow 6.25 \cdot 10^{-8} = \frac{1}{16 \cdot 10^6} \equiv \frac{1}{16MHz}
-\end{equation*}
-$$
+```c
+pinMode(int, <OUTPUT/INPUT>); // pin, direction
+digitalWrite(int, <HIGH/LOW>); // pin, state
 
-</details>
+analogRead(int); // pin
+analogWrite(int , int); // pin, value (0-255)
 
-2. or Intel i5-9600k processor at 3.2GHz
+Serial.begin(int); // speed (4800. 9600, 19200 ...)
+Serial.print(Type); // will write to serial any data type, without a new line terminator "/n"
+Serial.println(Type); // will write to serial any data type, with a new line terminator "/n"
 
-<details>
-<summary>Answer</summary>
+delay(int); // a specified amount of time in ms the cpu will wait before continuing to the next line
+```
 
-$$
-\begin{equation*}
-    312.5ps \leftarrow 3.125 \cdot 10^{-10} = \frac{1}{3.2 \cdot 10^9} \equiv \frac{1}{3.2GHz}
-\end{equation*}
-$$
-
-</details>
-
-3. or Intel i9-14900KF Processor at 9.044GHz (Overclocked)
-
-<details>
-<summary>Answer</summary>
-
-$$
-\begin{equation*}
-    110.57ps \leftarrow 1.1057 \cdot 10^{-10} = \frac{1}{9.044 \cdot 10^9} \equiv \frac{1}{9.044GHz}
-\end{equation*}
-$$
-</details>
-
----
-
+<!--
 ## Progamming a $\mu C$
 
 Like all µC they only work if they are programmed to. Generally they are programmed using `C/C++`, `Assembly` programming languages which all compile down to binary. 
@@ -223,7 +219,7 @@ int add(int num){
 </div>
 
 Don’t worry will not be programming in Assembly, `C/C++` is a language we can understand easily as it more human readable.
-<!--
+
 ---
 
 ## Simulation Time
