@@ -21,12 +21,19 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    section::after {
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: GEEN1064 | Engineering Design and Implementation
+auto-scaling: false
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: ""-->
 
 # Sensors With Arduino Development Board 
 

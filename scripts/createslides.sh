@@ -36,6 +36,10 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "$modulecode | $modulename"
 size: 16:9
 paginate: true
 _paginate: false
@@ -43,13 +47,15 @@ marp: true
 math: true
 ---
 
+<!-- _footer: "" -->
+
 # LECTURE TITLE
 
-    Module Code: $coursecode
+    Module Code: $modulecode
 
-    Module Name: $coursename
+    Module Name: $modulename
 
-    Lecturer: $lecturer
+    Lecturer: $moduleleader
 
 ---
 EOF

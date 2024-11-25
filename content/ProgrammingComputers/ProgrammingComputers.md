@@ -27,13 +27,19 @@ style: |
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
-
+    section::after {
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: GEEN1064 | Engineering Design and Implementation
+auto-scaling: false
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: ""-->
 
 # Programming and Flow Diagrams
 
@@ -47,7 +53,7 @@ math: true
 
 ---
 
-![bg center 35%](https://imgs.xkcd.com/comics/good_code.png)
+![bg center 32%](https://imgs.xkcd.com/comics/good_code.png)
 
 ---
 
@@ -353,7 +359,7 @@ while (i < 10)​
 
 ## Mermaid Exercise
 
-[https://mermaid-js.github.io/mermaid-live-editor/edit/](https://mermaid-js.github.io/mermaid-live-editor/edit/)
+[https://mermaid-js.github.io/mermaid-live-editor/edit/ w:800](https://mermaid-js.github.io/mermaid-live-editor/edit/)
 
 So now that we have seen mermaid, write out the flow for a robot to make a hot beverage such as tea.
 ​
@@ -366,7 +372,7 @@ Computers are not good or bad at a job, it is how well the human programs it.​
 
 [https://blockly.games/?lang=en](https://blockly.games/?lang=en)
 
-![center](../../figures/blockly.png)
+![center ](../../figures/blockly.png)
 
 ---
 
