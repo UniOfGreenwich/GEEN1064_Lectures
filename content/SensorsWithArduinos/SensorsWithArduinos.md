@@ -21,12 +21,19 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
-size: 16:9
+    section::after {
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: GEEN1064 | Engineering Design and Implementation
+auto-scaling: false
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/GEEN1064-Lectures/raw/gh-pages/content/SensorsWithArduinos/SensorsWithArduinos.pdf)" -->
+
 
 # Sensors With Arduino Development Board 
 

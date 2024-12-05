@@ -27,13 +27,18 @@ style: |
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
-
-size: 16:9
+    section::after {
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: GEEN1064 | Engineering Design and Implementation
+auto-scaling: false
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/GEEN1064-Lectures/raw/gh-pages/content/ProgrammingComputers/ProgrammingComputers.pdf)" -->
 
 # Programming and Flow Diagrams
 
@@ -47,7 +52,7 @@ math: true
 
 ---
 
-![bg center 35%](https://imgs.xkcd.com/comics/good_code.png)
+![bg center 30%](https://imgs.xkcd.com/comics/good_code.png)
 
 ---
 
@@ -347,7 +352,7 @@ while (i < 10)​
 
 [https://mermaid-js.github.io/mermaid-live-editor/edit/](https://mermaid-js.github.io/mermaid-live-editor/edit/)
 
-![h:570 center](../../figures/mermaid.png)
+![h:450 center](../../figures/mermaid.png)
 
 ---
 

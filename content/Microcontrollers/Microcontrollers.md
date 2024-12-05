@@ -32,6 +32,8 @@ marp: true
 math: true
 ---
 
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/GEEN1064-Lectures/raw/gh-pages/content/Microcontrollers/Microcontrollers.pdf)" -->
+
 # Development Boards 
 
     Module Code: GEEN1064
@@ -126,7 +128,7 @@ Prototype Board from Arduino
 
 ---
 
-![w:935 center](../../figures/AUno_Rev2_CD.png)
+![w:900 center](../../figures/AUno_Rev2_CD.png)
 
 ---
 
