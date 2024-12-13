@@ -32,6 +32,8 @@ marp: true
 math: true
 ---
 
+<!-- _footer: ""-->
+
 # Development Boards 
 
     Module Code: GEEN1064
