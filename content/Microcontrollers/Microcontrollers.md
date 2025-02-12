@@ -32,7 +32,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: ""-->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/GEEN1064_Lectures/raw/gh-pages/content/Microcontrollers/Microcontrollers.pdf)" -->
 
 # Development Boards 
 
