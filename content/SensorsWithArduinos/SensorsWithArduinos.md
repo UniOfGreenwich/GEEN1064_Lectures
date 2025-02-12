@@ -33,7 +33,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: ""-->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/GEEN1064_Lectures/raw/gh-pages/content/SensorsWithArduinos/SensorsWithArduinos.pdf)" -->
 
 # Sensors With Arduino Development Board 
 
@@ -45,33 +45,6 @@ math: true
 
 ---
 
-## What is (and is not) A Microcontroller (µC) PT 1
-
-<div style="font-size:24px">
-
-- A µC is a small, self-contained computer that is housed on asingle integrated circuit, or microchip.
-
-- They differ from your desktop computer in that they are typically dedicated to a single function, and are most often embedded in other devices (e.g. mobile phones; household electronics).
-
-- A µC is an Integrated Circuit (IC) device used for controlling other portions of an electronic system
-
-- These devices are optimized for embedded applications that require both processing functionality and agile, responsive interaction with digital, analogue, or electromechanical components.
-
-</div>
-
-![bg right:30% 100%](../../figures/greekMicro.png)
-
----
-
-## What is (and is not) A Microcontroller (µC) PT 2
-
-- “µC” is a well-chosen name because it emphasizes defining characteristics of this product category. The prefix “µ” implies smallness and the term "controller" here implies an enhanced ability to perform control functions.
-
--  As stated above, this functionality is the result of combining a digital processor and digital memory with additional hardware that is specifically designed to help the µC interact with other components.
-
-![bg right:30% 100%](../../figures/greekMicro.png)
-
----
 
 ## Arduino Uno
 
