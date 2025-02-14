@@ -299,9 +299,8 @@ $$
 
 
 
-1111 \ \ 1111\\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1111 \ \ 1111\\ \ \ \ \ F \ \ \ \ \ \ \ F
 
-F \ \ \ \ \ \ \ F
 $$
 
 </p>
@@ -310,9 +309,10 @@ $$
 
 $$
 
-1100 \ 1010 \ 0101 \ 0111\\
+\ \ \ \ \ \ \ \ \ \ \ 1100 \ 1010 \ 0101 \ 0111\\
 
-C\ \ \ \  \ A\ \ \ \ \ \ 5 \ \   \ \ \ 7
+\ \ \ \ \ C\ \ \ \  \ A\ \ \ \ \ \ 5 \ \   \ \ \ 7
+
 $$
 
 </p>
@@ -409,7 +409,7 @@ $$
 
 </td>
 <td>
-<img src="../../figures/permissions.PNG">
+<img src="../../figures/permissions.png">
 </dd>
 
 </tr>
@@ -449,7 +449,7 @@ $$
 
 ## American Standard Code for Information Interchange (ASCII)
 
-<p style="font-size:17px" align=center>
+<div style="font-size:17px" align=center>
 
 |Dec|  Char | Dec|Char|Dec|Char|Dec |Char|Dec  |Char|Dec  |Char|Dec  |Char|Dec  |Char|     
 |---|-------|----|----|----|---|---|----|-----|----|-----|----|-----|----|-----|----|
@@ -467,4 +467,4 @@ $$
 |43 | +     |56 | 8 |69  | E  |82  | R  | 95  | _  |108 | l |121 | y|||
 |44 | ,     |57 | 9 |70  | F  |83  | S  | 96  | `  |109 | m |122| z |||
 
-</p>
+</div>
